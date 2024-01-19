@@ -20,8 +20,6 @@ a {
 	justify-content: center;
 }
 img {
-	height: 100%;
-	width: 100%;
 	object-fit: cover;
 }
 p {
@@ -89,7 +87,7 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
+	width: 100% !important;
 	height: 100%;
 	max-width: 1300px;
 	padding: 0 10px;
@@ -200,11 +198,12 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url('./img/3.jpg');
+	background-image: url('./img/img-1.png');
 	background-size: 100%;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
+	transition: opacity 1s ease-in-out;
 }
 #hero::after {
 	content: '';
@@ -217,6 +216,20 @@ p {
 	opacity: .7;
 	z-index: -1;
 }
+#hero {
+    animation: changebg 20s infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes changebg {
+    0% {background-image: url('./img/img-1.png');}
+    25% {background-image: url('./img/img-2.png');}
+	50% {background-image: url('./img/img-1.png');}
+    75% {background-image: url('./img/img-3.png');}
+	100% {background-image: url('./img/img-1.png');}
+}
+
 #hero .hero {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -297,6 +310,7 @@ p {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	min-height: 300px !important;
 }
 #services .service-item::after {
 	content: '';
@@ -353,9 +367,9 @@ p {
 	border-radius: 10px;
 }
 #projects .project-info {
-	padding: 30px;
-	flex-basis: 50%;
-	height: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	height: 300px !important;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -516,6 +530,7 @@ p {
 	height: 50px;
 	width: 50px;
 	margin: 0 5px;
+	border-radius: 50%;
 }
 #footer .social-item img {
 	filter: grayscale(1);
