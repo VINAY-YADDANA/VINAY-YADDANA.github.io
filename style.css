@@ -283,7 +283,6 @@ p {
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
-	padding: 100px 0;
 }
 #services .service-top {
 	max-width: 500px;
@@ -345,7 +344,6 @@ p {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 0;
 }
 #projects .projects-header h1 {
 	margin-bottom: 50px;
@@ -362,14 +360,14 @@ p {
 	justify-content: center;
 	flex-direction: column;
 	width: 80%;
-	margin: 20px auto;
+	margin: 10px auto;
 	overflow: hidden;
 	border-radius: 10px;
 }
 #projects .project-info {
 	padding-left: 30px;
 	padding-right: 30px;
-	height: 300px !important;
+	min-height: 200px !important;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -461,11 +459,76 @@ p {
 }
 /* End About Section */
 
+
+/* Openings Section */
+#openings .openings {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+    min-height: 70vh;
+}
+#openings .openings-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#openings .openings-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#openings .openings-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url('./img/img-1.png');
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	min-height: 50px !important;
+}
+#openings .openings-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: .95;
+	z-index: -1;
+}
+#openings .openings-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#openings .openings-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#openings .openings-item p {
+	color: white;
+	text-align: left;
+}
+/* End Openings Section */
+
 /* contact Section */
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
+    min-height: 60vh;
 }
 #contact .contact-items {
 	width: 400px;
@@ -610,7 +673,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#projects .project-item {
-		height: 400px;
+		min-height: 300px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -651,7 +714,6 @@ p {
 	/* contact  */
 	#contact .contact {
 		flex-direction: column;
-		padding: 100px 0;
 		align-items: center;
 		justify-content: center;
 		min-width: 20vh;
