@@ -497,6 +497,14 @@ p {
 	min-height: 50px !important;
 }
 
+.openings-anchor {
+    color: white;
+}
+
+.openings-anchor:hover {
+    color: crimson;
+}
+
 #openings .openings-item::after {
 	content: '';
 	position: absolute;
@@ -542,10 +550,6 @@ p {
 	border-radius: 10px;
 	padding: 30px;
 	margin: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: .3s ease box-shadow;
 }
@@ -731,10 +735,6 @@ p {
 		width: 30%;
 		margin: 0;
 		flex-direction: row;
-	}
-	#contact .contact-item .icon {
-		height: 100px;
-		width: 100px;
 	}
 	#contact .contact-item .icon img {
 		object-fit: contain;
